@@ -1,0 +1,39 @@
+1：从远程仓库分支拉代码 master （初始化）
+git  clone https://github.com/youngJavabird/guanlipingtai.git
+
+2:建立本地分支
+ git branch 查看有哪些分支
+
+ git checkout -b develop 建立新的本地分支
+
+ git checkout  master  从develop 切换到master
+
+
+3：提交本地代码
+  git status 查看本地哪些文件被修改
+  git add a.asp b.asp 提交具体文件
+  git add  -f  a/  b/ 提交a,b目录下所有被修改的文件
+  git add -A -f  *     提交本地删除的文件或目录
+  git commit -m "描述" 提交add的目录或文件
+  git push origin master   提交代码到远端
+
+
+4:拉取远程分支拉去代码
+  git pull origin  master （这个命令常用，也要习惯性的用）
+
+
+5:合并分支 develop->master
+  5.1 切换到被合并的分支master
+    git checkout  master
+  5.2 develop合并到master
+    git merge develop
+  5.3 push到远端
+    git push origin  master 
+
+6.删除远程分支develop
+  6.1 切换其他分支
+  6.2 删除远程分支
+   git branch -D  develop
+
+7.查看提交log
+   git log
